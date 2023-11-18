@@ -15,13 +15,13 @@ $(document).ready(function() {
         var documentHeight = $(document).height();
 
         // Adjust these values based on layout and preference
-        var topThreshold = windowHeight / 4;
-        var bottomThreshold = documentHeight - windowHeight - topThreshold;
+        var topThreshold = windowHeight ;
+        var bottomThreshold = documentHeight - (windowHeight/3) - topThreshold;
 
         $('nav ul li a').removeClass("active");
 
         if (scrollPos < topThreshold) {
-            $('nav ul li a[href="#about-loc"]').addClass("active");
+            $('nav ul li a[href="#"]').addClass("active");
         } else if (scrollPos > bottomThreshold) {
             $('nav ul li a[href="#contact-loc"]').addClass("active");
         } else {
